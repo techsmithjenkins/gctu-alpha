@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForestGuard AI | Coming Soon</title>
+  <link rel="icon" href="assets/alpha.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth fade-in animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Bouncing dots animation */
+    .dot-bounce {
+      display: inline-flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .dot-bounce span {
+      width: 14px;
+      height: 14px;
+      background-color: #34d399; /* Tailwind green-400 */
+      border-radius: 50%;
+      display: inline-block;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+
+    .dot-bounce span:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .dot-bounce span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dot-bounce span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.3;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Animated background particles */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.keybiodiversityareas.org/images/news/7e5f0215c86beabdb4273d92918c6942.jpg') center/cover no-repeat;
+      z-index: -1;
+      filter: brightness(0.5);
+      overflow: hidden;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      h1 { font-size: 2.5rem; }
+      p { font-size: 1.125rem; }
+      .dot-bounce span { width: 10px; height: 10px; }
+      form input { width: 100%; }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-100 bg-gray-900 overflow-x-hidden">
+
+  <!-- Animated background -->
+  <div class="background"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-green-900 bg-opacity-90 text-white px-6 py-4 flex justify-between items-center z-50 shadow-lg">
+    <h1 class="text-2xl font-bold">GCTU Alpha</h1>
+    <span class="hidden md:block text-green-300 font-semibold">Coming Soon</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 md:pt-0">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 fade">
+      🌲 ForestGuard AI
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl max-w-lg mb-6 fade">
+      Our dashboard is undergoing some updates and upgrades.<br>
+      <span class="font-bold text-green-400">Wait patiently on us</span>
+    </p>
+
+    <!-- Animated Dots -->
+    <div class="dot-bounce fade">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Email Notify Form -->
+    <form
+      class="flex flex-col sm:flex-row justify-center gap-3 mt-8 fade"
+      onsubmit="event.preventDefault(); 
+        const userEmail = this.querySelector('input[type=email]').value;
+        window.location.href = `mailto:gctualpha@gmail.com?cc=ghnewton10@gmail.com,juristjenkins@gmail.com,senabelinda14@gmail.com&subject=Notification&body=Please notify me about updates. My email: ${userEmail}`;">
+      <input type="email" placeholder="Enter your email"
+        class="px-4 py-3 rounded-lg text-black w-72 focus:outline-none focus:ring-2 focus:ring-green-400" required>
+      <button class="px-6 py-3 bg-green-400 text-black font-bold rounded-lg hover:bg-green-500 transition shadow-md">
+        Notify Us
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-950 text-gray-300 text-center py-6 mt-12">
+    <p>© 2025 GCTU Alpha – Technology for a Greener Tomorrow</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:text-green-400">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- JS Scroll Animations -->
+  <script>
+    const faders = document.querySelectorAll(".fade");
+    const appearOnScroll = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.2 }
+    );
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+
+</html>
