@@ -7,12 +7,40 @@
     <title>ForestGuard AI | GCTU Alpha</title>
     <link rel="icon" href="assets/alpha.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                /* Moves the track left by 50% (the width of one grid block) */
+                transform: translateX(-50%);
+            }
+        }
+
+        /* This applies the animation to the track */
+        .animate-scroll {
+            display: flex;
+            /* 200% width because it holds 2 identical grid blocks */
+            width: 200%;
+            animation: scroll 30s linear infinite;
+            /* You can change '30s' to be faster or slower */
+        }
+
+        /* This pauses the animation on hover */
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 
 <body class="font-sans text-gray-800 scroll-smooth">
 
     <!-- Navbar -->
-    <nav class="fixed w-full bg-green-900 text-white px-6 py-4 mb-4 flex justify-between items-center z-50 shadow">
+    <nav class="fixed w-full bg-green-900 text-white px-6 py-2 mb-4 flex justify-between items-center z-50 shadow">
         <a href="#hero-header">
             <h1 class="text-2xl font-bold">GCTU Alpha</h1>
         </a>
@@ -228,84 +256,63 @@
 
 
     <!--Gallery Section-->
-    <style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      /* Moves the track left by 50% (the width of one grid block) */
-      transform: translateX(-50%);
-    }
-  }
+    <section id="gallery-scroll" class="py-20 bg-white">
+        <div class="max-w mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-900 mb-12">Our Journey in Pictures</h2>
 
-  /* This applies the animation to the track */
-  .animate-scroll {
-    display: flex;
-    /* 200% width because it holds 2 identical grid blocks */
-    width: 200%; 
-    animation: scroll 30s linear infinite; /* You can change '30s' to be faster or slower */
-  }
+            <div class="w-full mx-auto overflow-hidden">
+                <div class="animate-scroll">
 
-  /* This pauses the animation on hover */
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
-</style>
+                    <div class="w-1/2 flex-shrink-0 p-2">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-<section id="gallery-scroll" class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-6"> <h2 class="text-3xl font-bold text-center text-green-900 mb-12">Our Journey in Pictures</h2>
+                            <div class="md:col-span-1">
+                                <img src="assets/prototype.png" alt="Prototype"
+                                    class="w-full h-56 object-cover rounded-lg shadow-md">
+                            </div>
 
-    <div class="w-full mx-auto overflow-hidden">
+                            <div class="md:col-span-2">
+                                <img src="assets/dashboard.png" alt="Dashboard"
+                                    class="w-full h-40 object-cover rounded-lg shadow-md">
+                            </div>
 
-      <div class="animate-scroll">
+                            <div class="md:col-span-2">
+                                <img src="assets/testing.jpg" alt="Testing"
+                                    class="w-full h-40 object-cover rounded-lg shadow-md">
+                            </div>
 
-        <div class="w-1/2 flex-shrink-0 p-2">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="md:col-span-1">
-              <img src="assets/prototype.png" alt="Prototype"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
+                            <div class="md:col-span-1">
+                                <img src="assets/seeed.jpg" alt="Sensor"
+                                    class="w-full h-56 object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 flex-shrink-0 p-2">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="md:col-span-1">
+                                <img src="assets/prototype.png" alt="Prototype"
+                                    class="w-full h-56 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:col-span-2">
+                                <img src="assets/dashboard.png" alt="Dashboard"
+                                    class="w-full h-40 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:col-span-2">
+                                <img src="assets/testing.jpg" alt="Testing"
+                                    class="w-full h-40 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:col-span-1">
+                                <img src="assets:seeed.jpg" alt="Sensor"
+                                    class="w-full h-56 object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="md:col-span-2">
-              <img src="assets/dashboard.png" alt="Dashboard"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
-            </div>
-            <div class="md:col-span-2">
-              <img src="assets/testing.jpg" alt="Testing"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
-            </div>
-            <div class="md:col-span-1">
-              <img src="assets/seeed.jpg" alt="Sensor"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
-            </div>
-          </div>
         </div>
-
-        <div class="w-1/2 flex-shrink-0 p-2">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="md:col-span-1">
-              <img src="assets/prototype.png" alt="Prototype"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
-            </div>
-            <div class="md:col-span-2">
-              <img src="assets/dashboard.png" alt="Dashboard"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
-            </div>
-            <div class="md:col-span-2">
-              <img src="assets/testing.jpg" alt="Testing"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
-            </div>
-            <div class="md:col-span-1">
-              <img src="assets/seeed.jpg" alt="Sensor"
-                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
-            </div>
-          </div>
-        </div>
-
-      </div> </div> </div>
-</section>
-
-
+    </section>
 
     <!-- Impact Section -->
     <section id="impact" class="py-20 px-6 max-w-6xl mx-auto fade opacity-0 translate-y-8 transition-all duration-1000">
