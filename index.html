@@ -150,8 +150,8 @@
                 <div class="mt-2 text-xs text-gray-500 italic">Faculty Advisor & Mentor</div>
             </div>
         </div>
-            
-        
+
+
         <p class="mt-6 text-gray-700">
             We are, a team of innovators tackling environmental crises with technology.
             ForestGuard AI is our flagship solution — using <strong>AI-powered sound recognition and IoT
@@ -222,10 +222,90 @@
                         Explore ForestGuard AI
                     </a>
                 </section>
-
             </div>
         </div>
     </section>
+
+
+    <!--Gallery Section-->
+    <style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Moves the track left by 50% (the width of one grid block) */
+      transform: translateX(-50%);
+    }
+  }
+
+  /* This applies the animation to the track */
+  .animate-scroll {
+    display: flex;
+    /* 200% width because it holds 2 identical grid blocks */
+    width: 200%; 
+    animation: scroll 30s linear infinite; /* You can change '30s' to be faster or slower */
+  }
+
+  /* This pauses the animation on hover */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<section id="gallery-scroll" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6"> <h2 class="text-3xl font-bold text-center text-green-900 mb-12">Our Journey in Pictures</h2>
+
+    <div class="w-full mx-auto overflow-hidden">
+
+      <div class="animate-scroll">
+
+        <div class="w-1/2 flex-shrink-0 p-2">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-1">
+              <img src="assets/prototype.png" alt="Prototype"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
+            </div>
+            <div class="md:col-span-2">
+              <img src="assets/dashboard.png" alt="Dashboard"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
+            </div>
+            <div class="md:col-span-2">
+              <img src="assets/testing.jpg" alt="Testing"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
+            </div>
+            <div class="md:col-span-1">
+              <img src="assets/seeed.jpg" alt="Sensor"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2 flex-shrink-0 p-2">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-1">
+              <img src="assets/prototype.png" alt="Prototype"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
+            </div>
+            <div class="md:col-span-2">
+              <img src="assets/dashboard.png" alt="Dashboard"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
+            </div>
+            <div class="md:col-span-2">
+              <img src="assets/testing.jpg" alt="Testing"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-video">
+            </div>
+            <div class="md:col-span-1">
+              <img src="assets/seeed.jpg" alt="Sensor"
+                class="w-full h-full object-cover rounded-lg shadow-md aspect-square">
+            </div>
+          </div>
+        </div>
+
+      </div> </div> </div>
+</section>
+
+
 
     <!-- Impact Section -->
     <section id="impact" class="py-20 px-6 max-w-6xl mx-auto fade opacity-0 translate-y-8 transition-all duration-1000">
@@ -365,6 +445,3 @@
 </body>
 
 </html>
-
-
-
