@@ -99,7 +99,7 @@
 
     <!-- Mobile Menu -->
     <div id="menu"
-        class="hidden fixed top-16 left-0 w-full bg-green-700 bg-opacity-95 text-white flex flex-col items-center space-y-4 py-6 md:hidden z-40 shadow-lg">
+        class="hidden fixed top-12 left-0 w-full bg-green-700 bg-opacity-95 text-white flex flex-col items-center space-y-4 py-6 md:hidden z-40 shadow-lg">
         <a href="#about" class="hover:text-green-300 text-lg font-semibold">About</a>
         <a href="#project" class="hover:text-green-300 text-lg font-semibold">Project</a>
         <a href="#impact" class="hover:text-green-300 text-lg font-semibold">Impact</a>
@@ -111,11 +111,11 @@
 
     <!-- Hero Section -->
     <section
-        class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center text-white px-6 pt-16 md:pt-0    mb-16 md:mb-32 lg:mb-8 scroll-mb-26 md:scroll-mb-32 lg:scroll-mb-40"
+        class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center text-white px-6 pt-16 md:pt-0 mb-36 md:mb-32 lg:mb-8 scroll-mb-26 md:scroll-mb-32 lg:scroll-mb-40"
         style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/af387a27-83de-495a-be1e-d3f67a980e5e/db69zan-7c56285c-9692-40ff-8062-7413cb7094af.jpg/v1/fill/w_1600,h_1200,q_75,strp/the_great_assam_forest_by_mountainslynx_db69zan-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIwMCIsInBhdGgiOiJcL2ZcL2FmMzg3YTI3LTgzZGUtNDk1YS1iZTFlLWQzZjY3YTk4MGU1ZVwvZGI2OXphbi03YzU2Mjg1Yy05NjkyLTQwZmYtODA2Mi03NDEzY2I3MDk0YWYuanBnIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9HZg47e99ZI41_cWelCoFrASomZtK3BbkwY9E-r_szc');">
 
         <!-- Hero Header -->
-        <div id="hero-header" class="mb-8 mt-16 md:mt-32 lg:mt-8 scroll-mt-26 md:scroll-mt-32 lg:scroll-mt-40">
+        <div id="hero-header" class="mb-8 mt-72 md:mt-32 lg:mt-8 scroll-mt-26 md:scroll-mt-32 lg:scroll-mt-40">
             <header>
                 <h1
                     class="text-2xl sm:text-3xl md:text-6xl font-bold mb-4 mt-8 sm:mt-12 md:mt-16 fade opacity-0 translate-y-8 transition-all duration-1000">
@@ -153,26 +153,35 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 max-w-6xl mx-auto fade opacity-0 translate-y-8 transition-all duration-1000">
+    <section id="about"
+        class="py-20 px-6 max-w-6xl mx-auto mt-64 md:mt-auto lg:mt-auto fade opacity-0 translate-y-8 transition-all duration-1000">
         <h2 class="text-3xl font-bold text-center text-green-900 mb-6">Who We Are</h2>
         <p class="text-center max-w-2xl mx-auto mb-12">We are GCTU Alpha, a group of four innovators from Ghana
             Communication Technology University. Our mission is to solve pressing environmental problems using
             technology.</p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
             <div class="bg-gray-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition">
-                <img src="assets/eli2.jpg" class="mx-auto rounded-full mb-4" alt="Elipklim Kofi Nyahe">
+                <div class="w-40 h-40 lg:w-56 lg:h-56 mx-auto rounded-full overflow-hidden mb-4 shadow-inner">
+                    <img src="assets/eli2.jpg" class="w-full h-full object-cover" alt="Elipklim Kofi Nyahe">
+                </div>
                 <h3 class="font-bold">Elipklim Kofi Nyahe</h3>
                 <p class="text-sm">Project Lead<br>IoT Engineer, ML Specialist</p>
             </div>
+
             <div class="bg-gray-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition">
-                <img src="assets/jurist.jpg" class="mx-auto rounded-full mb-4" alt="Jurist Jenkins">
+                <div class="w-40 h-40 lg:w-56 lg:h-56 mx-auto rounded-full overflow-hidden mb-4 shadow-inner">
+                    <img src="assets/jurist.jpg" class="w-full h-full object-cover" alt="Jurist Jenkins">
+                </div>
                 <h3 class="font-bold">Jurist Jenkins</h3>
-                <p class="text-sm">Software Engineer</p>
+                <p class="text-sm">Software Engineer<br>CAD Designer</p>
             </div>
+
             <div class="bg-gray-100 rounded-xl p-6 text-center shadow hover:shadow-lg transition">
-                <img src="assets/sena crop.jpg" class="mx-auto rounded-full mb-4" alt="Sena Belinda">
+                <div class="w-40 h-40 lg:w-56 lg:h-56 mx-auto rounded-full overflow-hidden mb-4 shadow-inner">
+                    <img src="assets/sena crop.jpg" class="w-full h-full object-cover" alt="Jurist Jenkins">
+                </div>
                 <h3 class="font-bold">Sena Belinda</h3>
-                <p class="text-sm">Software Engineer</p>
+                <p class="text-sm">Software Engineer<br>UI/UX Designer</p>
             </div>
 
             <div class="bg-yellow-50 rounded-xl p-8 text-center shadow-lg border-2 border-yellow-400 max-w-xs w-full">
@@ -292,74 +301,109 @@
             animation-play-state: paused;
         }
 
-        /* Consistent image sizing and no gaps */
+        /* General image styles - Height is now handled in HTML */
         .grid img {
             display: block;
             width: 100%;
             object-fit: cover;
             border-radius: 0.5rem;
-            /* rounded-lg */
-        }
-
-        /* Optional: standardize height for each row */
-        .md\:col-span-1 img {
-            height: 14rem;
-            /* adjust to suit your design */
-        }
-
-        .md\:col-span-2 img {
-            height: 14rem;
-            /* same row height for alignment */
         }
     </style>
 
-    <section id="gallery-scroll" class="py-16 bg-white">
+    <section id="gallery-scroll" class="py-16 bg-white overflow-hidden">
         <div class="max-w mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Our Journey in Pictures</h2>
 
             <div class="w-full overflow-hidden">
                 <div class="animate-scroll">
 
-                    <!-- Block 1 -->
                     <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div class="md:col-span-1"><img src="assets/patent.png" alt="Patent"></div>
-                            <div class="md:col-span-2"><img src="assets/patent2.png" alt="Patent 2"></div>
-                            <div class="md:col-span-2"><img src="assets/breadboard.png" alt="Breadboard"></div>
-                            <div class="md:col-span-1"><img src="assets/alpha.jpg" alt="Team"></div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+
+                            <div class="col-span-1 md:col-span-1">
+                                <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Patent">
+                            </div>
+
+                            <div class="col-span-1 md:col-span-2">
+                                <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Patent 2">
+                            </div>
+
+                            <div class="col-span-2 md:col-span-2">
+                                <img src="assets/breadboard.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Breadboard">
+                            </div>
+
+                            <div class="col-span-2 md:col-span-1">
+                                <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Team">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Block 2 -->
                     <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div class="md:col-span-1"><img src="assets/nodes.png" alt="nodes"></div>
-                            <div class="md:col-span-2"><img src="assets/confusion_matrix.png" alt="model"></div>
-                            <div class="md:col-span-2"><img src="assets/classifier.png" alt="classifier"></div>
-                            <div class="md:col-span-1"><img src="assets/seeed.jpg" alt="Sensor"></div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            <div class="col-span-1 md:col-span-1">
+                                <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="nodes">
+                            </div>
+                            <div class="col-span-1 md:col-span-2">
+                                <img src="assets/confusion_matrix.png"
+                                    class="h-28 md:h-56 w-full object-cover rounded-lg" alt="model">
+                            </div>
+                            <div class="col-span-2 md:col-span-2">
+                                <img src="assets/classifier.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="classifier">
+                            </div>
+                            <div class="col-span-2 md:col-span-1">
+                                <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Sensor">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Block 3 (repeat Block 1) -->
                     <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div class="md:col-span-1"><img src="assets/patent.png" alt="Patent"></div>
-                            <div class="md:col-span-2"><img src="assets/patent2.png" alt="Patent 2"></div>
-                            <div class="md:col-span-2"><img src="assets/breadboard.png" alt="Breadboard"></div>
-                            <div class="md:col-span-1"><img src="assets/alpha.jpg" alt="Team"></div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            <div class="col-span-1 md:col-span-1">
+                                <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Patent">
+                            </div>
+                            <div class="col-span-1 md:col-span-2">
+                                <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Patent 2">
+                            </div>
+                            <div class="col-span-2 md:col-span-2">
+                                <img src="assets/breadboard.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Breadboard">
+                            </div>
+                            <div class="col-span-2 md:col-span-1">
+                                <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Team">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Block 4 (repeat Block 2) -->
                     <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div class="md:col-span-1"><img src="assets/nodes.png" alt="nodes"></div>
-                            <div class="md:col-span-2"><img src="assets/confusion_matrix.png" alt="model"></div>
-                            <div class="md:col-span-2"><img src="assets/classifier.png" alt="classifier"></div>
-                            <div class="md:col-span-1"><img src="assets/seeed.jpg" alt="Sensor"></div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            <div class="col-span-1 md:col-span-1">
+                                <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="nodes">
+                            </div>
+                            <div class="col-span-1 md:col-span-2">
+                                <img src="assets/confusion_matrix.png"
+                                    class="h-28 md:h-56 w-full object-cover rounded-lg" alt="model">
+                            </div>
+                            <div class="col-span-2 md:col-span-2">
+                                <img src="assets/classifier.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="classifier">
+                            </div>
+                            <div class="col-span-2 md:col-span-1">
+                                <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
+                                    alt="Sensor">
+                            </div>
                         </div>
                     </div>
-
 
                 </div>
             </div>
