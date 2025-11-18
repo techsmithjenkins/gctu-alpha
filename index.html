@@ -280,133 +280,99 @@
 
 
     <!--Gallery Section-->
-    <style>
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-scroll {
-            display: flex;
-            width: 400%;
-            animation: scroll 40s linear infinite;
-        }
-
-        .animate-scroll:has(img:hover) {
-            animation-play-state: paused;
-        }
-
-        /* General image styles - Height is now handled in HTML */
-        .grid img {
-            display: block;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 0.5rem;
-        }
-    </style>
-
-    <section id="gallery-scroll" class="py-16 bg-white overflow-hidden">
-        <div class="max-w mx-auto px-6">
+    <section id="gallery-scroll" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Our Journey in Pictures</h2>
 
-            <div class="w-full overflow-hidden">
-                <div class="animate-scroll">
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4"
+                style="scrollbar-width: none; -ms-overflow-style: none;">
 
-                    <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-
-                            <div class="col-span-1 md:col-span-1">
-                                <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Patent">
-                            </div>
-
-                            <div class="col-span-1 md:col-span-2">
-                                <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Patent 2">
-                            </div>
-
-                            <div class="col-span-2 md:col-span-2">
-                                <img src="assets/breadboard.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Breadboard">
-                            </div>
-
-                            <div class="col-span-2 md:col-span-1">
-                                <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Team">
-                            </div>
+                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="col-span-1 md:col-span-1">
+                            <img src="assets/patent.png" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Patent">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <img src="assets/patent2.png" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Patent 2">
+                        </div>
+                        <div class="col-span-2 md:col-span-2">
+                            <img src="assets/breadboard.png"
+                                class="h-32 md:h-56 w-2/3 md:w-full object-cover click-zoom rounded-lg shadow-sm" alt="Breadboard">
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="assets/alpha.jpg" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Team">
                         </div>
                     </div>
-
-                    <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                            <div class="col-span-1 md:col-span-1">
-                                <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="nodes">
-                            </div>
-                            <div class="col-span-1 md:col-span-2">
-                                <img src="assets/confusion_matrix.png"
-                                    class="h-28 md:h-56 w-full object-cover rounded-lg" alt="model">
-                            </div>
-                            <div class="col-span-2 md:col-span-2">
-                                <img src="assets/classifier.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="classifier">
-                            </div>
-                            <div class="col-span-2 md:col-span-1">
-                                <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Sensor">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                            <div class="col-span-1 md:col-span-1">
-                                <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Patent">
-                            </div>
-                            <div class="col-span-1 md:col-span-2">
-                                <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Patent 2">
-                            </div>
-                            <div class="col-span-2 md:col-span-2">
-                                <img src="assets/breadboard.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Breadboard">
-                            </div>
-                            <div class="col-span-2 md:col-span-1">
-                                <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Team">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/4 flex-shrink-0 px-2">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                            <div class="col-span-1 md:col-span-1">
-                                <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="nodes">
-                            </div>
-                            <div class="col-span-1 md:col-span-2">
-                                <img src="assets/confusion_matrix.png"
-                                    class="h-28 md:h-56 w-full object-cover rounded-lg" alt="model">
-                            </div>
-                            <div class="col-span-2 md:col-span-2">
-                                <img src="assets/classifier.png" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="classifier">
-                            </div>
-                            <div class="col-span-2 md:col-span-1">
-                                <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover rounded-lg"
-                                    alt="Sensor">
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="col-span-1 md:col-span-1">
+                            <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="nodes">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <img src="assets/confusion_matrix.png"
+                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="model">
+                        </div>
+                        <div class="col-span-2 md:col-span-2">
+                            <img src="assets/classifier.png"
+                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="classifier">
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Sensor">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="col-span-1 md:col-span-1">
+                            <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Patent">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Patent 2">
+                        </div>
+                        <div class="col-span-2 md:col-span-2">
+                            <img src="assets/breadboard.png"
+                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="Breadboard">
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Team">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="col-span-1 md:col-span-1">
+                            <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="nodes">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <img src="assets/confusion_matrix.png"
+                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="model">
+                        </div>
+                        <div class="col-span-2 md:col-span-2">
+                            <img src="assets/classifier.png"
+                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="classifier">
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
+                                alt="Sensor">
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <p class="text-center text-gray-400 text-sm mt-4">Swipe to see more &rarr;<br>Tap to zoom.</p>
         </div>
     </section>
 
@@ -511,6 +477,14 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imgModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50">
+        <div class="max-w-full max-h-full p-4">
+            <img id="modalImage" class="rounded-xl max-h-[90vh] max-w-[90vw] object-contain shadow-2xl">
+        </div>
+    </div>
+
+
     <!-- JS for Interactivity -->
     <script>
         const menuBtn = document.getElementById("menu-btn");
@@ -548,7 +522,29 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+
+        //scripts for image modals
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("imgModal");
+            const modalImage = document.getElementById("modalImage");
+
+            // Any image with class "click-zoom" becomes zoomable
+            document.querySelectorAll(".click-zoom").forEach(img => {
+                img.addEventListener("click", () => {
+                    modalImage.src = img.src;
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+                });
+            });
+
+            // Click anywhere to close
+            modal.addEventListener("click", () => {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            });
+        });
     </script>
+
 </body>
 
 </html>
