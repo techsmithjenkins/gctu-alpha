@@ -8,41 +8,6 @@
     <link rel="icon" href="assets/alpha.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
 
-
-    <!--
-    <style>
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                /* Moves the track left by 50% (the width of the first 2 blocks) */
-                transform: translateX(-50%);
-            }
-        }
-
-        /* This applies the animation to the track */
-        .animate-scroll {
-            display: flex;
-            width: 400%;
-            animation: scroll 40s linear infinite;
-        }
-
-        /* ---
-      THIS IS THE FIX:
-      It pauses the parent (.animate-scroll) only when a 
-      child (img) is being hovered.
-      ---
-    */
-        .animate-scroll:has(img:hover) {
-            animation-play-state: paused;
-        }
-    </style>
-    -->
-
-
-
 </head>
 
 <body class="font-sans text-gray-800 scroll-smooth">
@@ -275,113 +240,72 @@
 
 
 
-
-
-
-
-    <!--Gallery Section-->
-    <section id="gallery-scroll" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Our Journey in Pictures</h2>
 
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4"
-                style="scrollbar-width: none; -ms-overflow-style: none;">
-
-                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="col-span-1 md:col-span-1">
-                            <img src="assets/patent.png" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Patent">
+            <!-- Carousel Container -->
+            <div id="image-carousel" class="relative shadow-lg rounded-lg overflow-hidden">
+                <!-- Slides -->
+                <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item min-w-full relative">
+                        <img src="assets/alpha.jpg" class="w-full h-80 md:h-[32rem] object-cover" alt="GCTU Alpha Team" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 text-center">
+                            <h3 class="font-bold">The Team: GCTU Alpha</h3>
+                            <p class="text-sm">Innovators dedicated to solving environmental challenges.</p>
                         </div>
-                        <div class="col-span-1 md:col-span-2">
-                            <img src="assets/patent2.png" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Patent 2">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item min-w-full relative">
+                        <img src="assets/breadboard.png" class="w-full h-80 md:h-[32rem] object-cover" alt="Early Prototype" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 text-center">
+                            <h3 class="font-bold">Early Prototyping</h3>
+                            <p class="text-sm">Circuit design and testing on a breadboard.</p>
                         </div>
-                        <div class="col-span-2 md:col-span-2">
-                            <img src="assets/breadboard.png"
-                                class="h-32 md:h-56 w-2/3 md:w-full object-cover click-zoom rounded-lg shadow-sm" alt="Breadboard">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item min-w-full relative">
+                        <img src="assets/prototype.png" class="w-full h-80 md:h-[32rem] object-cover" alt="3D Printed Enclosure" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 text-center">
+                            <h3 class="font-bold">Circuit Onboarding</h3>
+                            <p class="text-sm">Simple circuit board for our node and sensor.</p>
                         </div>
-                        <div class="col-span-2 md:col-span-1">
-                            <img src="assets/alpha.jpg" class="h-32 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Team">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item min-w-full relative">
+                        <img src="assets/confusion_matrix.png" class="w-full h-80 md:h-[32rem] object-contain bg-gray-100" alt="AI Model Performance" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 text-center">
+                            <h3 class="font-bold">AI Model Accuracy</h3>
+                            <p class="text-sm">A confusion matrix showing the performance of our sound classification model.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-item min-w-full relative">
+                        <img src="assets/testing.jpg" class="w-full h-80 md:h-[32rem] object-cover" alt="Field Testing" />
+                        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 text-center">
+                            <h3 class="font-bold">Field Testing</h3>
+                            <p class="text-sm">Putting ForestGuard AI to the test in a real-world environment.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="col-span-1 md:col-span-1">
-                            <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="nodes">
-                        </div>
-                        <div class="col-span-1 md:col-span-2">
-                            <img src="assets/confusion_matrix.png"
-                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="model">
-                        </div>
-                        <div class="col-span-2 md:col-span-2">
-                            <img src="assets/classifier.png"
-                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="classifier">
-                        </div>
-                        <div class="col-span-2 md:col-span-1">
-                            <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Sensor">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="col-span-1 md:col-span-1">
-                            <img src="assets/patent.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Patent">
-                        </div>
-                        <div class="col-span-1 md:col-span-2">
-                            <img src="assets/patent2.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Patent 2">
-                        </div>
-                        <div class="col-span-2 md:col-span-2">
-                            <img src="assets/breadboard.png"
-                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="Breadboard">
-                        </div>
-                        <div class="col-span-2 md:col-span-1">
-                            <img src="assets/alpha.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Team">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full md:min-w-[80%] lg:min-w-[60%] flex-shrink-0 snap-center">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="col-span-1 md:col-span-1">
-                            <img src="assets/nodes.png" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="nodes">
-                        </div>
-                        <div class="col-span-1 md:col-span-2">
-                            <img src="assets/confusion_matrix.png"
-                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="model">
-                        </div>
-                        <div class="col-span-2 md:col-span-2">
-                            <img src="assets/classifier.png"
-                                class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm" alt="classifier">
-                        </div>
-                        <div class="col-span-2 md:col-span-1">
-                            <img src="assets/seeed.jpg" class="h-28 md:h-56 w-full object-cover click-zoom rounded-lg shadow-sm"
-                                alt="Sensor">
-                        </div>
-                    </div>
-                </div>
-
+    
+                <!-- Navigation Arrows -->
+                <button class="carousel-prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button class="carousel-next absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full p-2 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                </button>
             </div>
-            <p class="text-center text-gray-400 text-sm mt-4">Swipe to see more &rarr;<br>Tap to zoom.</p>
+
+            <!-- Indicator Dots (moved outside) -->
+            <div class="carousel-dots flex justify-center space-x-2 mt-4">
+                <!-- Dots will be generated by JS -->
+            </div>
         </div>
     </section>
-
-
-
-
-
-
-
 
     <!-- Impact Section -->
     <section id="impact" class="py-16 px-6 max-w-6xl mx-auto fade opacity-0 translate-y-8 transition-all duration-1000">
@@ -521,6 +445,84 @@
 
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
+        });
+
+        // New Carousel Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.getElementById("image-carousel");
+            if (!carousel) return;
+
+            const slidesContainer = carousel.querySelector(".carousel-slides");
+            let slides = Array.from(carousel.querySelectorAll(".carousel-item"));
+            const prevButton = carousel.querySelector(".carousel-prev");
+            const nextButton = carousel.querySelector(".carousel-next");
+            const dotsContainer = carousel.parentElement.querySelector(".carousel-dots");
+
+            const slideCount = slides.length;
+            let currentIndex = 1; // Start at the first real slide
+            let intervalId;
+
+            // Clone first and last slides for infinite loop effect
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[slideCount - 1].cloneNode(true);
+            slidesContainer.appendChild(firstClone);
+            slidesContainer.insertBefore(lastClone, slides[0]);
+            slides = Array.from(carousel.querySelectorAll(".carousel-item")); // Update slides array
+
+            // Initial position
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Create dots
+            for (let i = 0; i < slideCount; i++) {
+                const dot = document.createElement("button");
+                dot.classList.add("w-3", "h-3", "rounded-full", "bg-gray-300", "hover:bg-gray-500", "transition");
+                dot.addEventListener("click", () => {
+                    goToSlide(i + 1);
+                    resetInterval();
+                });
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = dotsContainer.querySelectorAll("button");
+
+            function updateDots() {
+                const dotIndex = (currentIndex - 1 + slideCount) % slideCount;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("bg-green-600", i === dotIndex);
+                    dot.classList.toggle("bg-gray-300", i !== dotIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+                slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots();
+            }
+
+            slidesContainer.addEventListener('transitionend', () => {
+                if (currentIndex === 0) { // If at the first clone (of the last slide)
+                    slidesContainer.style.transition = 'none';
+                    currentIndex = slideCount;
+                    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                } else if (currentIndex === slideCount + 1) { // If at the last clone (of the first slide)
+                    slidesContainer.style.transition = 'none';
+                    currentIndex = 1;
+                    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            });
+
+            function resetInterval() {
+                clearInterval(intervalId);
+                intervalId = setInterval(() => goToSlide(currentIndex + 1), 5000);
+            }
+
+            prevButton.addEventListener("click", () => { goToSlide(currentIndex - 1); resetInterval(); });
+            nextButton.addEventListener("click", () => { goToSlide(currentIndex + 1); resetInterval(); });
+
+            // Initialize
+            goToSlide(0);
+            resetInterval();
         });
 
         //scripts for image modals
